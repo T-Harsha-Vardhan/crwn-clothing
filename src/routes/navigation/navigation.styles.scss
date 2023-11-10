@@ -7,8 +7,11 @@
 
   .logo-container {
     height: 100%;
-    width: 70px;
+    width: 100px;
     padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-links-container {
