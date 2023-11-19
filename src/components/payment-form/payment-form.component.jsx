@@ -17,7 +17,6 @@ const PaymentForm = () => {
   const amount = useSelector(selectCartTotal);
   const currentUser = useSelector(selectCurrentUser);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
-  console.log(currentUser);
 
   const paymentHandler = async (e) => {
     e.preventDefault();
@@ -55,7 +54,6 @@ const PaymentForm = () => {
 
     if (paymentResult.error) {
       alert("payment error");
-      console.error(paymentResult.error);
     } else {
       if (paymentResult.paymentIntent.status === "succeeded") {
         alert("payment successful");
